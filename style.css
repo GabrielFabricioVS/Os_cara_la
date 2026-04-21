@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #FFC0CB;
+    font-family: Arial;
+}
+
+.caixa {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 px rgba(0,0,0,0.2);
+}
+
+.imagem {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* SIM */
+#sim {
+    background-color: #4CAF50;
+}
+
+/* NÃO */
+#nao {
+    background-color: #f44336;
+}
+/* corações */
+.coracao {
+    position: fixed;
+    bottom: 0;
+    pointer-events: none;
+    animation: subirSuave 3s ease-out forwards;
+}
+
+@keyframes subirSuave {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), -50vh); /* sobe até o meio */
+        opacity: 0;
+    }
+}
