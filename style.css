@@ -2,64 +2,131 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+
     background: #FFC0CB;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+
+    padding: 20px;
+    overflow: hidden;
 }
 
 .caixa {
     background: white;
-    padding: 40px;
+
+    width: 100%;
+    max-width: 400px;
+
+    padding: 25px;
+
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 0 px rgba(0,0,0,0.2);
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
 .imagem {
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
+
     border-radius: 15px;
+
+    margin-bottom: 15px;
+}
+
+#texto {
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
 button {
     padding: 12px 25px;
     margin: 10px;
+
     font-size: 18px;
+
     border: none;
     border-radius: 20px;
+
     cursor: pointer;
     color: white;
 
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* SIM */
 #sim {
     background-color: #4CAF50;
 }
 
-/* NÃO */
 #nao {
     background-color: #f44336;
 }
+
 /* corações */
+
 .coracao {
     position: fixed;
     bottom: 0;
+
     pointer-events: none;
+
     animation: subirSuave 3s ease-out forwards;
 }
 
 @keyframes subirSuave {
+
     0% {
         transform: translate(0, 0);
         opacity: 0;
     }
+
     20% {
         opacity: 1;
     }
+
     100% {
-        transform: translate(var(--x), -50vh); /* sobe até o meio */
+        transform: translate(var(--x), -50vh);
         opacity: 0;
     }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .caixa {
+        padding: 20px;
+    }
+
+    #texto {
+        font-size: 20px;
+    }
+
+    button {
+        width: 120px;
+        font-size: 16px;
+    }
+
+    .imagem {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .caixa {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .imagem {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
 }

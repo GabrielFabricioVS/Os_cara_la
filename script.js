@@ -39,7 +39,7 @@ botaoNao.addEventListener("click", function() {
     }
 
     // SIM cresce
-    tamanhoSim += 20;
+    tamanhoSim += 10;
     botaoSim.style.fontSize = tamanhoSim + "px";
     botaoSim.style.padding = (tamanhoSim / 2) + "px";
 
@@ -55,10 +55,11 @@ botaoNao.addEventListener("click", function() {
     if (cliques >= 5) {
         botaoNao.style.display = "none";
 
-        botaoSim.style.width = "40vw";
-        botaoSim.style.height = "40vh";
-        botaoSim.style.fontSize = "40px";
-        botaoSim.style.borderRadius = "10px";
+        botaoSim.style.width = "80%";
+        botaoSim.style.maxWidth = "300px";
+        botaoSim.style.height = "70px";
+        botaoSim.style.fontSize = "28px";
+        botaoSim.style.borderRadius = "20px";
     }
 });
 
